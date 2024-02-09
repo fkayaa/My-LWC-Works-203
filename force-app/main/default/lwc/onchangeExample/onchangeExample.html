@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Onchange">
+
+        <lightning-input label="Ad Soyad" onchange={handleChange}></lightning-input>
+
+        <div>{fullName}</div>
+
+        
+    </lightning-card>
+</template>
+
+<!-- Standart inputta oninput her değişiklikte, onchange ise bütün olarak yapılan değişikliklerde çalışır. -->
+<!-- Lightning inputta onchange her değişiklikte, onblur ise bütün olarak yapılan değişikliklerde çalışır. -->    

@@ -1,0 +1,43 @@
+<template>
+
+    <lightning-card title="For-Each">
+
+        <div class="slds-m-around_medium">
+<!--cityList-->
+<template for:each={cityList} for:item="city">
+
+    <p key={city}>{city}</p> <!--key belirtmemiz gerekiyor,city.id de desek olurdu-->
+
+<!--tag açmasaydık key vermeye gerek kalmazdı,ama yan yana gelirdi,alt alta gelmesi için block element kullanmak daha iyi olur-->
+</template>
+
+</div>
+</lightning-card>
+
+
+<!--customerList-->
+<lightning-card title="Customer List" icon-name="standard:contact">
+    <ul class="slds-m-around_medium">
+<template for:each={customerList} for:item="w">
+
+
+    <li key={w.id}>
+        
+       <div>Id : {w.id}</div>
+       <div>Name :{w.name}</div>
+       <div>Phone :{w.phone}</div>
+       <div>Email: {w.email}</div>
+       <img src={w.imgURL} alt="" width="200" height="250">
+       <!-- <div>image :{w.imgURL}</div> -->
+
+    </li>
+
+
+</template>
+</ul>
+
+</lightning-card>
+
+
+    
+</template>

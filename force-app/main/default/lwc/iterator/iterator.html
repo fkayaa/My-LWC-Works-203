@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="Şehirler">
+<div class="slds-m-around_medium">
+
+<template iterator:it={cityList}>
+
+<p key={it.value}>{it.value}</p>
+
+
+</template>
+
+
+</div>
+   </lightning-card>
+
+
+
+
+
+   <lightning-card title="it.first it.last">
+    <div class="slds-m-around_medium">
+
+        <template iterator:it={cityList}> <!--arrayin içine girdik ;ilk ve son elemanı yazdırdık-->
+
+  <p key={it.value} if:true={it.first}>{it.value}</p> <!--it.first ->ilk eleman için true,diğer elemanlar için false döndürür-->
+ 
+  <p key={it.value} if:true={it.last}>{it.value}</p>  <!--it.last ->son eleman için true,diğer elemanlar için false döndürür-->
+            
+            
+            </template> 
+<br><br>
+<hr>
+            <template iterator:it={cityList}>
+<p key={it} if:true={it.first}>************</p>
+<p key={it}>{it.value}</p>
+<p key={it} if:true={it.last}>************</p>
+
+
+
+
+            </template>
+
+
+</div>
+   </lightning-card>
+</template>

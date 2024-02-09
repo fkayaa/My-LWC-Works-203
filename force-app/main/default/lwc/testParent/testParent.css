@@ -1,0 +1,10 @@
+
+c-test-child {
+color:rgb(204, 14, 131);
+    --child : black;
+    --h1 :red;
+    --p :red;
+    --h3:red;
+    --span:red;
+}
+

@@ -1,0 +1,41 @@
+<template>
+<lightning-card title="Contract" icon-name="custom:custom43">
+
+    <div class="slds-m-around_medium">
+        <lightning-input type="checkbox" label="Show Details" onchange={handleChange} ></lightning-input>
+
+
+    <template lwc:if={display}> 
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, consequuntur excepturi dolores reiciendis odio officia? Voluptate, provident. Quibusdam, excepturi repudiandae veritatis provident id sed dolor magni ducimus, quam repellendus beatae.</p>
+
+    </template>
+</div>
+</lightning-card>
+
+<lightning-card title="Karar" icon-name="standard:decision">
+
+<div class="slds-m-around_medium">
+
+    <template lwc:if={display}>
+
+           Statement1;
+
+    </template>
+
+    <template lwc:elseif={display2}>
+
+        Statement2;
+
+    </template>
+
+    <template lwc:else>
+   Statement3;
+    </template>
+</div>
+</lightning-card>
+</template>
+
+
+<!-- Sayfa ilk yüklendiğinde Statement3 görünür. Daha sonra checkbox'a tıkladığımızda display'in değeri true olacağı için Statement1 görünür.
+display2 js de true olsaydı,ilk önce o görünürdü,false oldugu için Statement3 gösterildi -->  

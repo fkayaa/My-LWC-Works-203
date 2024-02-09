@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Parent" icon-name="custom:custom50">
+        <lightning-layout>
+            <lightning-layout-item class="slds-m-around_medium">
+                <c-child1 onclicked={handleButtonClicked}></c-child1>
+                <p>{eventName1}</p>
+            </lightning-layout-item>
+
+            <lightning-layout-item class="slds-m-around_medium">
+                <c-child2 onclicked2={handleButtonClicked2}></c-child2>
+                <p>{eventName2}</p>
+            </lightning-layout-item>
+
+
+            <lightning-layout-item class="slds-m-around_medium">
+
+                <c-child3 onclicked3={handleButtonClicked3}></c-child3>
+
+                <p>{eventName3}</p>
+
+
+            </lightning-layout-item>
+
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Aynı Componentta Event Handle Etme" icon-name="utility:brush">
+        <div class="slds-m-around_medium">
+
+
+<lightning-button label="Button" onclick={handleClick}></lightning-button>
+
+<p>Button Label : {button}</p>
+
+        </div>
+    </lightning-card>
+
+
+ <lightning-card title="Handle Child Event in Parent Html">
+
+        <div class="slds-m-around_medium">
+
+  <c-event-child onclick={handleClick2}></c-event-child> <!--childtaki button tıklanınca handleClick2 fonk çalısmıs oluyor-->
+
+        </div>
+    </lightning-card>
+
+
+    <lightning-card title="Handle Child Event in Parent JS">
+        <div class="slds-m-around_medium">
+<c-event-child1></c-event-child1>
+        </div>
+    </lightning-card>
+
+   
+    
+</template>

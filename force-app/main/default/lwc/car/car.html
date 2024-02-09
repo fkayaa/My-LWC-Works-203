@@ -1,0 +1,16 @@
+<template>
+<lightning-card title="car">
+
+    <div class="slds-m-around_medium">
+    <h1>BMW</h1>
+    
+<c-car-engine engine-model="Super Power"></c-car-engine>
+
+ <!-- 2 - Child'daki variable parent HTML içinde kebab case şeklinde yazılır ve parent'tan child'a veri aktarımı sağlanmış olur. -->
+
+ <lightning-input label="Motor Modeli" placeholder="Motor Modeli Giriniz" onchange={handleEngineChange}></lightning-input>
+ <c-car-engine engine-model={engineModelValue}></c-car-engine>
+
+</div>
+</lightning-card>
+</template>  

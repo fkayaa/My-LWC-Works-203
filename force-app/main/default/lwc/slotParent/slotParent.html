@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Parent Slot">
+        <div class="slds-var-m-around_medium">
+
+<h1>1.Parent Slot</h1>
+
+<c-slot-child>
+    
+    <h1>5.Parent Slot Header</h1>
+    <p>6.Parent Slot Paragraph</p>
+</c-slot-child>
+
+<p>4.Parent Paragraph</p>
+
+<c-slot-child-named> <!--tag aralarına yazdıklarımızın görünür olması için,tag'e ait olan componentta slot taglerini olustururuz-->
+    <span slot="1">Daha Güzeli</span>    <!--bütün olarak değil de istenilen şekilde  veri göndermek istiyorsak "slot" attribute ile özel olarak belirlemiş-yer ayırtmıs oluruz-->
+    <div slot="2">Bundan</div>
+    <span slot="3">Nasıl Olur</span>
+
+    <!--Normal taglerin içine slot attribute gelir-->
+    <!--child ta kinde de "slot" tagi içerisinde "name" attribute'u ile eşleşir-->
+</c-slot-child-named>
+
+        </div>
+    </lightning-card>
+    
+</template>

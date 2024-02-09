@@ -1,0 +1,52 @@
+<template>
+    <lightning-card title="Calculator" icon-name="standard:budget_period">
+        <div class="slds-m-around_medium">
+
+            <lightning-input type="Number" label="Number 1" onchange={getNumber}></lightning-input>
+            <lightning-input type="Number" label="Number 2" onchange={getNumber}></lightning-input>
+
+
+<lightning-button-group class="slds-m-vertical_medium">
+
+
+             <lightning-button label="Toplama" onclick={calculate}></lightning-button>
+             <lightning-button label="Çıkarma" onclick={calculate}></lightning-button>
+             <lightning-button label="Çarpma" onclick={calculate}></lightning-button>
+             <lightning-button label="Bölme" onclick={calculate}></lightning-button>
+
+
+
+
+</lightning-button-group>
+
+<p>Result : {result}</p>
+<p>Önceki Değerler : {oldValues}</p> <br>
+
+
+<lightning-input type="Checkbox" label="Show Old Values" onchange={handleCheckbox}></lightning-input>
+
+<template if:true={showValue}>
+    
+
+    <ul>
+
+        <template for:each={oldValues} for:item="w">
+
+<li key={w}>{w}</li>
+
+        
+        </template>
+
+       
+
+
+      </ul>
+
+</template>
+
+     
+
+
+</div>
+</lightning-card>
+</template>

@@ -1,0 +1,57 @@
+<template>
+    
+    <template if:true={contacts.data}>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+            <thead>
+                <tr class="slds-line-height_reset">
+                  <th scope="col">
+                    <div class="slds-truncate">Contact Name</div>
+                  </th>
+                  <th scope="col">
+                    <div class="slds-truncate">Street</div>
+                  </th>
+                  <th  scope="col">
+                    <div class="slds-truncate">City</div>
+                  </th>
+                  <th  scope="col">
+                    <div class="slds-truncate">State</div>
+                  </th>
+                  <th  scope="col">
+                    <div class="slds-truncate">Country</div>
+                  </th>
+                </tr>
+              </thead>
+        </table>
+
+        <template for:each={contacts.data} for:item="con">
+            <div key={con.Id}>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+                    <tbody>
+                      <tr class="slds-hint-parent">    
+                        <td>
+                          <div class="slds-truncate"><a name={con.Id} onclick={goToContact}>{con.Name}</a></div>
+                        </td>
+                        <td>
+                          <div class="slds-truncate">{con.MailingStreet}</div>
+                        </td>
+                        <td>
+                          <div class="slds-truncate">{con.MailingCity}</div>
+                        </td>
+                        <td>
+                          <div class="slds-truncate">{con.MailingState}</div>
+                        </td>
+                        <td>
+                          <div class="slds-truncate">{con.MailingCountry}</div>
+                        </td>  
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </template>
+    </template>
+
+    <template if:true={contacts.error}>
+        <p>{contacts.error}</p>
+    </template>
+
+</template>

@@ -1,0 +1,20 @@
+h1 {
+    color :blue;
+}
+
+p {
+
+    color:blueviolet;
+}
+
+c-my-child-component {   /*child e bu şekilde deger verebiliriz*/
+
+    color :green;
+    --renk: pink; /*childta tanımlandıgı için ,parentta özele inilip update edilebilir.*/
+    --div-renk: red;
+    --div-bg-renk:gray ; 
+
+
+}
+
+

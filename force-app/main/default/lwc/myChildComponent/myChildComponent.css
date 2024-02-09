@@ -1,0 +1,15 @@
+h1 {
+
+    color :chocolate;
+}
+
+p {
+
+    color :var(--renk,red); /*bu şekilde tanımlarsak,parenttanda ulasabiliriz,baska türlü özele inmiyor*/
+}
+div {
+ 
+    color : var(--div-renk,coral);
+    background-color: var(--div-bg-renk,black); /* önüne -- yazılması gerekli*/
+
+}

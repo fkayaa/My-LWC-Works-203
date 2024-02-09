@@ -1,0 +1,41 @@
+   <template>
+    <!--if:true örnegi-->
+ <lightning-card title="Condition Rendering if:True" icon-name="standard:decision">
+
+   
+    <div class="slds-m-around_medium">
+ 
+        <h1>flag: {flag} </h1>
+        <template if:true={flag}>
+            <p>flag true oldugu için burası görünür</p>
+        </template>
+      
+       
+    </div>
+ </lightning-card>
+
+<!--if:false örnegi-->
+ <lightning-card title="Condition Rendering if:False" icon-name="standard:decision">
+    <div class="slds-var-m-around_medium">
+
+
+        <template if:false={display}>
+        <p>Lütfen Kullanım Şartlarını Kabul Ediniz</p>
+
+
+</template>
+
+
+<lightning-input type="checkbox" label="Kabul Ediyorum" onchange={handleChange}>
+   
+</lightning-input>
+    </div>
+
+
+
+
+
+
+ </lightning-card>
+    
+</template>

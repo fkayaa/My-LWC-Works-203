@@ -1,0 +1,31 @@
+<template>
+
+    <lightning-card title="Iterator Homework">
+  <div class="slds-m-around_medium">
+
+        
+    <ul>
+
+        <template iterator:it={customerList}>
+
+    <li key={it.id}>
+
+          <div>{it.value.name}</div>
+          <div>{it.value.phone}</div>
+          <div>{it.value.email}</div>
+         <img src={it.value.imgURL} alt="" width="200" height="250">
+        
+
+
+
+   </li>
+
+   </template>
+
+    </ul>
+
+  </div>
+
+    </lightning-card>
+    
+</template>

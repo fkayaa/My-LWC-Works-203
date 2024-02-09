@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Track Array" icon-name="utility:richtextnumberedlist">
+        <div class="slds-var-m-around_medium">
+
+<form>
+    <lightning-input label="Sayı Ekleyiniz" onchange={handleChange}></lightning-input> <br><br>
+<lightning-button label="Ekle" onclick={handleClick}></lightning-button>
+
+<template for:each={numbers} for:item="num">
+
+        <p key={num}>{num}</p>
+
+</template>
+
+</form>
+
+        </div>
+    </lightning-card>
+    
+</template>

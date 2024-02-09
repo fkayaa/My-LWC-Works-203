@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Slot Child Named">
+        <div class="slds-m-around_medium">
+
+<slot name="2"></slot> <!--parentta "slot"   attribute nin karsılıgı ,slot tag'inde name attribute dür.Orda "slot" attribute nün içine ne yazıysak,onu ifade eden tag burda "name" attribute ile ifade edilir,ayrı ayrı belirttik-->
+
+<h1>7.Child Slot Named Header</h1>
+
+<slot name="1"></slot>
+
+
+<p>8.Child Slot Named Paragraph</p>
+
+
+<slot name="3"></slot>
+
+        </div>
+    </lightning-card>
+
+    
+</template>

@@ -1,0 +1,25 @@
+h1 {
+    color :brown;
+}
+c-slot-child {
+    color :blueviolet;
+
+}
+c-slot-child p {
+
+   color : pink;
+
+   font-size: 15px;
+
+}
+p {
+    color:red;
+}
+c-slot-child-named span {
+
+    color :purple;
+}
+c-slot-child-named div {
+
+    color :purple;
+}

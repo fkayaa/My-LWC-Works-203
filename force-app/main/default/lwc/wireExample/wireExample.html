@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Account" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+           <form>
+            <lightning-input label="Search Account" onblur={getInputValue}></lightning-input>
+
+            <ul>
+
+                <!-- 3- Apex metodunun return ettiği değeri JS içindeki accounts'a vermiştik. Burada "accounts.data" yazarak bu listeyi alıp, işliyoruz -->
+                <template for:each={accounts.data} for:item="acc">
+                    <li key={acc.Id}>{acc.Name}, {acc.Industry}</li>
+                </template>
+            </ul>
+           </form>
+        </div>
+    </lightning-card>
+</template>
+
+    

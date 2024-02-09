@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Setter" icon-name="custom:custom36">
+        <div class="slds-m-around_medium">
+
+<lightning-input type="number" label="Yeni Yaş Giriniz" onchange={handleAge}></lightning-input>
+<lightning-button label="Yeni Yaşı Görmek İçin Tıklayınız" onclick={handleClick}></lightning-button>
+<br>
+<div>İsim : {name}</div>
+<div>Yaş : {age}</div>
+<div>Getter dan dönen değer : {age1}</div>
+
+
+
+
+
+        </div>
+    </lightning-card>
+    
+</template>

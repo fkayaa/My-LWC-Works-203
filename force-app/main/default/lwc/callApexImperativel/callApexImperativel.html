@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Accounts Get Button" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+           <form>
+
+            <lightning-input label="Search Account" onchange={getInputValue}></lightning-input> <br>
+            <lightning-button label="Get Accounts" onclick={handleGetAccounts}></lightning-button>
+
+            <ul>
+                <template for:each={accounts} for:item="acc">
+                    <li key={acc.Id}>{acc.Name}, {acc.Industry}</li>
+                </template>
+            </ul>
+           </form>
+        </div>
+
+    </lightning-card>
+</template>

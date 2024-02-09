@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Delete Case" icon-name="doctype:link">
+        <div class="slds-m-around_medium">
+           
+           
+            <form> <!--form tagi içerisine almamızın sebebi,reset() methodu form tegleri içerisinde çalısıyor,basarı durumunda resetlenmesi için js tarafında template.querySelector ile form tagi içerisine form yazıp resetlemesi için reset()deriz-->
+
+            <lightning-input label="Case Id" placeholder="Lütfen bir Id giriniz..." onchange={handleChange}></lightning-input> <br>
+            <lightning-button
+                variant="destructive"
+                label="Delete Case"
+                icon-name="utility:delete"
+                onclick={deleteCase}>
+            </lightning-button>
+
+           </form>
+        </div>
+    </lightning-card>
+</template>
+

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Create Account" icon-name="standard:account">
+<div class="slds-m-around_medium">
+
+<lightning-record-edit-form object-api-name="Account" onsuccess={handleSuccess}>
+
+<lightning-input-field field-name="Name"></lightning-input-field>
+<lightning-input-field field-name="Phone"></lightning-input-field>
+<lightning-input-field field-name="Industry"></lightning-input-field>
+<lightning-input-field field-name="Rating"></lightning-input-field>
+<lightning-input-field field-name="AnnualRevenue"></lightning-input-field> <br>
+
+<lightning-button type="submit" label="Create Account"></lightning-button>
+
+</lightning-record-edit-form>
+
+<div class="slds-m-around_medium">{success}</div>
+
+
+</div>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,56 @@
+<template>
+    
+  <template if:true={childAccounts.data}>
+      <template for:each={childAccounts.data} for:item="acc">
+          <div key={acc.Id}>
+              <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+                  <thead>
+                    <tr class="slds-line-height_reset">
+                      <th scope="col">
+                        <div class="slds-truncate">Account Name</div>
+                      </th>
+                      <th scope="col">
+                        <div class="slds-truncate">Street</div>
+                      </th>
+                      <th  scope="col">
+                        <div class="slds-truncate">City</div>
+                      </th>
+                      <th  scope="col">
+                        <div class="slds-truncate">State</div>
+                      </th>
+                      <th  scope="col">
+                        <div class="slds-truncate">Country</div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="slds-hint-parent">    
+                      <td>
+                        <div class="slds-truncate"><a name={acc.Id} onclick={goToAccount}>{acc.Name}</a></div>
+                      </td>
+                      <td>
+                        <div class="slds-truncate">{acc.BillingStreet}</div>
+                      </td>
+                      <td>
+                        <div class="slds-truncate">{acc.BillingCity}</div>
+                      </td>
+                      <td>
+                        <div class="slds-truncate">{acc.BillingState}</div>
+                      </td>
+                      <td>
+                        <div class="slds-truncate">{acc.BillingCountry}</div>
+                      </td>  
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <c-child-contact acc-id={acc.Id}></c-child-contact>
+          </div>
+      </template>
+  </template>
+
+  <template if:true={childAccounts.error}>
+      <p>{childAccounts.error}</p>
+  </template>
+
+</template>

@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="View Contact" icon-name="custom:custom60">
+        <div class="slds-m-around_medium">
+
+        <lightning-record-view-form object-api-name={objectName} record-id={recordId} density="compact">
+
+<lightning-output-field field-name={fields.fName}></lightning-output-field>
+<lightning-output-field field-name={fields.lName}></lightning-output-field>
+
+        </lightning-record-view-form>
+
+        </div>
+    </lightning-card>
+</template>

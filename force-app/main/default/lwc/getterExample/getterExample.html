@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Getter" icon-name="custom:custom31">
+        <div class="slds-m-around_medium">
+
+                        
+            <p>Result : {result}</p>
+           <p>Result2 : {result2}</p>
+            <p>Sum : {sum}</p>
+            <p>Substract : {substract}</p>
+            <p>Multiple : {multiple}</p>
+            <p>Division :{divide}</p>
+            <p>{firstIndexValue}</p>
+            <p>Getter : {IlkIndexValue}</p>
+            <p>{lastIndexValue}</p>
+
+
+        </div>
+    </lightning-card>
+
+
+    <lightning-card>
+        <lightning-input label="Array İçin İndex Numarası Giriniz" placeholder="0'dan 4'e kadar bir sayı giriniz..." onblur={handleBlur}></lightning-input>
+   
+
+        <p>{nameIndexValue}</p>
+   
+    </lightning-card>
+
+    
+</template>

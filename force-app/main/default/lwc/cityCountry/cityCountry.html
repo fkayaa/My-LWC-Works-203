@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Ülke Şehir">
+        <div class="slds-m-around_medium"> 
+
+<lightning-input label="Ülke" onchange={ülke}></lightning-input>
+<lightning-input label="Şehir" onchange={sehir}></lightning-input>
+<lightning-input label="Neyi Ünlü" onchange={ünlüsü}></lightning-input>
+
+<c-city-country-details>
+    <span slot="country">{country}</span>
+    <span slot="city">{city}</span>
+    <span slot="famous">{famous}</span>
+</c-city-country-details>
+        </div>
+    </lightning-card>
+
+    
+</template>

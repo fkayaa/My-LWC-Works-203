@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Toast Example" icon-name="custom:custom47">
+        <div class="slds-m-around_medium">
+<lightning-input label="Başlık" value={_title} onchange={titleChange}></lightning-input>
+<lightning-input label="Mesaj" value={_message} onchange={messageChange}></lightning-input>
+<lightning-combobox label="Değiştir" value={_variant} onchange={variantChange} options={variantOptions}></lightning-combobox><br><br> <!--picklist oldugu için combobox kullandık ve içine options attributes girilmesi lazım-->
+<lightning-button label="Bildirimleri Göster" onclick={showToastNotification}></lightning-button>
+
+
+        </div>
+    </lightning-card>
+    
+</template>

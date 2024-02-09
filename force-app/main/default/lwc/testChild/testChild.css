@@ -1,0 +1,22 @@
+h1 {
+      color:var(--h1, burlywood);
+}
+
+p {
+       color:var(--p,chartreuse);
+}
+
+h3 {
+       color :var(--h3,purple);
+
+}
+
+span {
+
+       color :var(--span,aquamarine);
+    }
+
+div {
+
+      background-color : var(--child,blue);
+}
